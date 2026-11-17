@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+# kohalikud ja isiklikud failid
+graafika.txt
+viga.log
+hinnakiri.json
+_to_delete/
+# Mesa DLL-id (laadi alla eraldi, vt README)
+mesa/
+# projektid ja väljundid
+*.moobel
+*_juhend/

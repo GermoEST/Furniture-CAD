@@ -1,0 +1,10 @@
+PySide6>=6.5
+pyvista>=0.43
+pyvistaqt>=0.11
+vtk>=9.2
+trimesh>=4.0
+shapely>=2.0
+manifold3d>=2.4
+mapbox_earcut
+opencv-python>=4.8
+numpy

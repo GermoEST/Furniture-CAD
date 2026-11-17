@@ -1,0 +1,21 @@
+GERMO MÖÖBLI DISAINER
+=====================
+
+Paigaldamine (üks kord):
+  1. Topeltklikk install.bat (paigaldab vajalikud Pythoni moodulid)
+  2. Käivita: topeltklikk Moobel.pyw (või kaivita.bat, mis näitab vigu)
+  Vana videokaart: vaata README.md lõiku "Vana videokaart" (Mesa kaust)
+
+Kiire proov:  Fail -> Näidis: kirjutuslaud  või  Mallid…
+
+Põhitöö:
+  - Detailid: Plaat / latt, Mööblijalad, 3D fail, Lisa sahtlid / uksed / riiulid, Mallid
+  - Kokku: "Liida pinnad" (M) – kliki kahte pinda
+  - Kinnitused: vali tüüp ülaribalt, "Lisa kinnitus" (K), kliki detaili välispinnale
+  - Paremal paneelil: mõõdud, asukoht, servakant, pind, käepideme stiil
+  - Valmistamine: Lõikeplaan, Puurimisjoonised, Kontrolli, Esitlus, Maksumus,
+    Nimekiri, Sammud, Monteerimisjuhend
+
+Keel: lipunupud akna paremas ülanurgas (EST / ENG).
+Projekt salvestub .moobel failina (Ctrl+S). F1 = abi, F2 = klahvid.
+Kui programm ei käivitu, vaata faili viga.log samas kaustas.
