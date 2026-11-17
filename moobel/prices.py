@@ -8,7 +8,7 @@ import json
 import math
 import os
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from .glboot import ROOT
 PATH = os.path.join(ROOT, "hinnakiri.json")
 VERSION = 2
 

@@ -10,3 +10,6 @@ mesa/
 # projektid ja väljundid
 *.moobel
 *_juhend/
+build/
+dist/
+*.spec

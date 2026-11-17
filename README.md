@@ -49,6 +49,12 @@ Programmil on eesti ja inglise keel (lipunupud akna paremas ülanurgas).
 
 Kiire proov: **Fail → Näidis: kirjutuslaud** või **🧩 Mallid…**
 
+### Oma .exe ehitamine
+
+Pärast `install.bat` käivitamist tee topeltklikk failil **`build_exe.bat`**. Ehitamine võtab 3–10 minutit ja
+tulemus on kaustas **`dist\Moobel\Moobel.exe`**. Teisele arvutile andmiseks paki kogu kaust `dist\Moobel` ZIP-iks.
+Selles arvutis ei pea siis Pythonit olema. Kui programmi kaustas on `mesa` kaust, kopeeritakse see automaatselt kaasa.
+
 ### Vana videokaart või videokaart puudub
 
 3D-vaade vajab OpenGL 3.2 tuge. Kui videokaart seda ei toeta (näiteks Intel HD 2000 või kaugtöölaud), kasutab programm
@@ -96,7 +102,8 @@ edge; cutting plan (PDF); drilling drawings (PDF); assembly guide (PDF + HTML) a
 your own prices and currency; presentation image (PNG/PDF); measuring tool, collision and hole checks, surface textures.
 
 **Install (Windows):** install Python 3.10+ (tick “Add Python to PATH”), download this repo, run `install.bat`, then
-start `Moobel.pyw` (or `kaivita.bat` to see errors). Try **File → Sample: desk** or **🧩 Templates…**.
+start `Moobel.pyw` (or `kaivita.bat` to see errors). To build a standalone `Moobel.exe`, run `build_exe.bat`
+(result in `dist\Moobel`). Try **File → Sample: desk** or **🧩 Templates…**.
 
 **Old or missing graphics card:** the 3D view needs OpenGL 3.2. Download Mesa for Windows from
 [pal1000/mesa-dist-win](https://github.com/pal1000/mesa-dist-win/releases) and copy `x64/opengl32.dll` and

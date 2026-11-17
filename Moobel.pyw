@@ -5,8 +5,11 @@ import threading
 import time
 import traceback
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, ROOT)
+if getattr(sys, "frozen", False):
+    ROOT = os.path.dirname(sys.executable)
+else:
+    ROOT = os.path.dirname(os.path.abspath(__file__))
+    sys.path.insert(0, ROOT)
 
 
 def missing(name):
@@ -68,6 +71,10 @@ def run():
 
 
 if __name__ == "__main__":
+    if "--glprobe" in sys.argv:          # graafika test (.exe versioonis)
+        from moobel import glboot
+        glboot.probe_main()
+        sys.exit(0)
     try:
         run()
     except SystemExit:

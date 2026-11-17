@@ -8,7 +8,9 @@ import os
 import sys
 
 _DONE = None
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FROZEN = getattr(sys, "frozen", False)
+# programmi kaust: .exe kõrval (PyInstaller) või lähtekoodi kaust
+ROOT = os.path.dirname(sys.executable) if FROZEN else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MESA_DIR = os.path.join(ROOT, "mesa")
 MESA_DLL = os.path.join(MESA_DIR, "opengl32.dll")
 
@@ -38,8 +40,17 @@ try:
     r = r.decode() if isinstance(r, bytes) else str(r)
 except Exception:
     pass
-print("GLPROBE", int(bool(ok)), fm.majorVersion(), fm.minorVersion(), int(c.isOpenGLES()), r)
+_out = "GLPROBE %d %d %d %d %s" % (int(bool(ok)), fm.majorVersion(), fm.minorVersion(), int(c.isOpenGLES()), r)
+if os.environ.get("MOOBEL_PROBE_OUT"):
+    open(os.environ["MOOBEL_PROBE_OUT"], "w", encoding="utf-8").write(_out)
+else:
+    print(_out)
 """
+
+
+def probe_main():
+    """Käivitatakse .exe-s argumendiga --glprobe (seal pole python -c võimalust)."""
+    exec(_GL_PROBE, {"__name__": "__probe__"})
 
 
 def gl_log(text, mode="a"):
@@ -64,10 +75,18 @@ def _sw_dll():
 def _run_probe():
     import subprocess
     try:
+        import tempfile
         flags = 0x08000000 if os.name == "nt" else 0   # CREATE_NO_WINDOW
-        r = subprocess.run([sys.executable, "-c", _GL_PROBE], capture_output=True, text=True,
-                           timeout=60, creationflags=flags, env=dict(os.environ))
-        line = [l for l in r.stdout.splitlines() if l.startswith("GLPROBE")]
+        out = os.path.join(tempfile.gettempdir(), f"moobel_glprobe_{os.getpid()}.txt")
+        env = dict(os.environ, MOOBEL_PROBE_OUT=out)
+        cmd = [sys.executable, "--glprobe"] if FROZEN else [sys.executable, "-c", _GL_PROBE]
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=60, creationflags=flags, env=env)
+        txt = ""
+        if os.path.exists(out):
+            with open(out, encoding="utf-8") as fh:
+                txt = fh.read()
+            os.remove(out)
+        line = [l for l in txt.splitlines() if l.startswith("GLPROBE")]
         return line[0] if line else f"GLPROBE 0 0 0 0 (viga: {(r.stderr or '').strip()[-300:]})"
     except Exception as e:
         return f"GLPROBE 0 0 0 0 (viga: {e})"
