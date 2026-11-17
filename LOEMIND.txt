@@ -1,21 +1,71 @@
-GERMO MÖÖBLI DISAINER
-=====================
+# GERMO MÖÖBLI DISAINER
 
-Paigaldamine (üks kord):
-  1. Topeltklikk install.bat (paigaldab vajalikud Pythoni moodulid)
-  2. Käivita: topeltklikk Moobel.pyw (või kaivita.bat, mis näitab vigu)
-  Vana videokaart: vaata README.md lõiku "Vana videokaart" (Mesa kaust)
+## 🚀 Kõige lihtsam viis alustamiseks (soovitatav)
 
-Kiire proov:  Fail -> Näidis: kirjutuslaud  või  Mallid…
+Kui sa ei taha käsitsi paigaldusega jaurata, mine **Releases** alla, laadi alla eelkompileeritud ZIP-fail, paki see lahti ja käivita **Moobel.exe**.
 
-Põhitöö:
-  - Detailid: Plaat / latt, Mööblijalad, 3D fail, Lisa sahtlid / uksed / riiulid, Mallid
-  - Kokku: "Liida pinnad" (M) – kliki kahte pinda
-  - Kinnitused: vali tüüp ülaribalt, "Lisa kinnitus" (K), kliki detaili välispinnale
-  - Paremal paneelil: mõõdud, asukoht, servakant, pind, käepideme stiil
-  - Valmistamine: Lõikeplaan, Puurimisjoonised, Kontrolli, Esitlus, Maksumus,
-    Nimekiri, Sammud, Monteerimisjuhend
+Valmis! Pythonit ega eraldi moodulite paigaldamist pole vaja.
 
-Keel: lipunupud akna paremas ülanurgas (EST / ENG).
-Projekt salvestub .moobel failina (Ctrl+S). F1 = abi, F2 = klahvid.
-Kui programm ei käivitu, vaata faili viga.log samas kaustas.
+## Käsitsi paigaldamine (ainult üks kord)
+
+1. Tee topeltklõps failil `install.bat` (paigaldab vajalikud Pythoni moodulid).
+2. Käivita programm topeltklõpsuga failil `Moobel.pyw` (või kasuta faili `kaivita.bat`, mis kuvab ka võimalikud veateated).
+
+**Vana videokaart:** vaata README.md lõiku „Vana videokaart“ (Mesa kaust).
+
+## Kiire proovimine
+
+Vali menüüst **Fail → Näidis → Kirjutuslaud** või ava **Mallid…**
+
+## Põhifunktsioonid
+
+- **Detailid:** plaat / latt, mööblijalgade lisamine, 3D-faili importimine, sahtlite, uste ja riiulite lisamine ning mallid.
+- **Kokkuühendamine:** „Liida pinnad“ (M) – kliki kahel pinnal.
+- **Kinnitused:** vali ülaribalt kinnituse tüüp, vajuta „Lisa kinnitus“ (K) ja kliki detaili välispinnale.
+- **Parempoolne paneel:** mõõtmed, asukoht, servakant, pind ja käepideme stiil.
+- **Valmistamine:** lõikeplaan, puurimisjoonised, kontroll, esitlus, maksumus, nimekiri, tööetapid ja monteerimisjuhend.
+
+## Lisainfo
+
+- **Keele valimine:** lipunupud akna paremas ülanurgas (EST / ENG).
+- **Projekti salvestamine:** projekt salvestatakse `.moobel` failina (Ctrl+S).
+- **Abi:** F1.
+- **Klaviatuuri otseteed:** F2.
+- **Probleemid käivitamisel:** kui programm ei käivitu, vaata samas kaustas asuvat faili `viga.log`.
+
+---
+
+# GERMO FURNITURE DESIGNER
+
+## 🚀 The easiest way to get started (recommended)
+
+Don't want to deal with manual installation? Simply go to **Releases**, download the precompiled ZIP file, extract it, and run **Moobel.exe**.
+
+That's it! No Python installation or additional modules required.
+
+## Manual installation (one-time setup)
+
+1. Double-click `install.bat` (installs the required Python modules).
+2. Start the application by double-clicking `Moobel.pyw` (or use `kaivita.bat` to launch the application and display any error messages).
+
+**Older graphics cards:** see the "Older Graphics Cards" section in README.md (Mesa folder).
+
+## Quick Start
+
+Select **File → Example → Desk** or open **Templates…**
+
+## Main Features
+
+- **Parts:** boards / beams, furniture legs, 3D file import, add drawers / doors / shelves, and templates.
+- **Joining:** "Join Faces" (M) – click two faces to join them.
+- **Fasteners:** select a fastener type from the top toolbar, click "Add Fastener" (K), then click an outer face of a part.
+- **Right-hand panel:** dimensions, position, edge banding, surface finish, and handle style.
+- **Manufacturing:** cutting plans, drilling drawings, validation, presentation, cost estimation, parts list, workflow steps, and assembly instructions.
+
+## Additional Information
+
+- **Language selection:** use the flag buttons in the top-right corner of the window (EST / ENG).
+- **Saving projects:** projects are saved as `.moobel` files (Ctrl+S).
+- **Help:** F1.
+- **Keyboard shortcuts:** F2.
+- **Troubleshooting:** if the application fails to start, check the `viga.log` file in the same folder.
