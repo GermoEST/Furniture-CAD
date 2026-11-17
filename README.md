@@ -3,6 +3,10 @@
 ![Mööbli disainer](docs/aken.png)
 
 **Eesti keeles** · [English below](#english)
+🚀 Kõige lihtsam viis alustamiseks (soovitatav)
+
+Kui sa ei taha käsitsi paigaldusega jaurata, mine Releases alla, laadi alla eelkompileeritud ZIP-fail, paki see lahti ja käivita Moobel.exe.
+
 
 Lauaarvutiprogramm (Windows / Linux) mööbli disainimiseks: detailid, mööblikinnitused koos puuritud
 aukudega, 3D kokkupanek, monteerimisjuhend, lõikeplaan, puurimisjoonised ja maksumus.
@@ -89,6 +93,10 @@ Graafika valiku tulemus kirjutatakse faili `graafika.txt`.
 
 <a name="english"></a>
 ## English
+🚀 The easiest way to get started (recommended)
+
+Don't want to deal with manual installation? Simply go to Releases, download the precompiled ZIP file, extract it, and run Moobel.exe.
+
 
 Desktop program (Windows / Linux) for designing furniture: parts, furniture fasteners with drilled holes,
 3D assembly, assembly guide, cutting plan, drilling drawings and cost list. The interface is in Estonian and English
