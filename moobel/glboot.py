@@ -113,7 +113,9 @@ def setup():
     info = f"režiim={mode}"
     if mode == "auto":
         probe = settings.value("gl_probe", "")
-        if not probe:
+        okp, verp = _parse(probe) if probe else (0, (0, 0))
+        # nõrga tulemuse korral testi igal käivitusel uuesti – videokaart või draiver võis vahepeal muutuda
+        if not probe or not okp or verp < (3, 2):
             probe = _run_probe()
             settings.setValue("gl_probe", probe)
         ok, ver = _parse(probe)
